@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dominion Tech Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER 
+  <header>
+    <div class="logo">Your Logo Here</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#courses">Courses</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  -->
+  <header>
+  <div class="logo"><img src="image/logo replace.png" alt="My logo" /></div>
+  
+  <button class="hamburger" aria-label="Toggle Menu">
+    &#9776; <!-- ☰ Hamburger icon -->
+  </button>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#courses">Courses</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Welcome to <span>Dominion Tech Studio</span></h1>
+    <p>We specialize in <span class="rotating-text"></span></p>
+    <button class="cta-explore"><a href="#portfolio">Explore My Work</a></button>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses" class="courses">
+    <h2>My Courses</h2>
+    <div class="course-cards">
+      <!-- Free Course -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="image/graphic class.jpg" alt="Free Course" />
+            <h3>Free Class</h3>
+          </div>
+          <div class="flip-card-back">
+            <h3>Free Class</h3>
+            <p>Start learning with my free class today. Get practical knowledge to boost your design and tech journey.</p>
+            <a href="https://wa.me/2348088310842?text=Hi%20I%20want%20to%20join%20your%20free%20class.%20My%20name%20is..." target="_blank" class="neon-btn">Join Free Class</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Course -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="premium-course-placeholder.jpg" alt="Premium Course" />
+            <h3>Premium Course</h3>
+          </div>
+          <div class="flip-card-back">
+            <h3>Premium Course</h3>
+            <p>Full modern animated training — professional, hands-on, and coming soon.</p>
+            <button class="neon-btn disabled">Coming Soon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="countdown-container">
+    <h3>⏳ FREE CLASS COUNTDOWN</h3>
+    <div id="countdown">
+    <span id="days">00</span>Days :
+    <span id="hours">00</span>Hours :
+    <span id="minutes">00</span>Mins :
+    <span id="seconds">00</span>Secs
+  </div>
+</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m <strong>Clement Timothy (Dominion Tech)</strong>. 
+      I specialize in graphics design, branding, and professional web development. 
+      My mission is to bring creativity and technology together.
+    </p>
+    <div class="about-img"><img src="image/hero-image.png" alt="hero image" /></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Graphics Design</h3>
+        <p>Flyers, Posters, Banners, and Branding.</p>
+      </div>
+      <div class="card">
+        <h3>UI/UX Design</h3>
+        <p>Modern app and website interfaces.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Responsive and functional websites.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <h2>My Works</h2>
+
+    <!-- Graphics Design -->
+    <div class="portfolio-item" onclick="openGallery()">
+      <div class="card-img">
+        <img src="image/menu flyer.jpg" alt="menu flyer" />
+      </div>
+      <div class="card-content">
+        <h3>Graphics Design</h3>
+        <p>Creative posters, Promotional flyers & branding designs.</p>
+      </div>
+    </div>
+
+    <!-- Web Design -->
+    <div class="portfolio-item" onclick="expandItem(this)">
+      <div class="card-img">
+        <img src="image/church flyer.jpg" alt="church design project" />
+      </div>
+      <div class="card-content">
+        <h3>Church Flyer Design</h3>
+        <p>Church event flyer design showcasing vibrant colors and clean layout.</p>
+      </div>
+    </div>
+
+    <!-- UI/UX -->
+    <div class="portfolio-item" onclick="expandItem(this)">
+      <div class="card-img">
+        <img src="image/book cover.jpg" alt="ui ux project" />
+      </div>
+      <div class="card-content">
+        <h3>Book Cover Design</h3>
+        <p>Creative book cover design with engaging visuals and bold typography.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY MODAL -->
+  <div id="galleryModal" class="gallery-modal">
+    <span class="close" onclick="closeGallery()">&times;</span>
+    <div class="gallery-content">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="image/menu flyer.jpg" alt="Menu flyer" />
+        <img src="image/business flyer.jpg" alt="Business flyer" />
+        <img src="image/bus flyer.jpg" alt="Bus flyer" />
+         <img src="image/cake flyer design.jpg" alt="Cake flyer" />
+         <img src="image/promotional flyer.jpg" alt="Promotional flyer" />
+         <img src="image/real estate.jpg" alt="Real estate" />
+      </div>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Let’s work together. Reach me at:</p>
+    <ul>
+      <li>WhatsApp: <a href="https://wa.me/2348088310842">08088310842</a></li>
+      <li>Phone: 09063762123, 09167238455</li>
+      <li>Email: <a href="mailto:clementtimothy349@gmail.com">clementtimothy349@gmail.com</a>, <a href="mailto:clementt827@gmail.com">clementt827@gmail.com</a></li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Dominion Tech Studio. Built by Clement Timothy.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
